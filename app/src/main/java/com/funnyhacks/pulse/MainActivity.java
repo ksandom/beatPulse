@@ -42,15 +42,16 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // getBPM and put it to the user.
+                pulse.beat();
                 int bpm = pulse.getBPM();
                 String bmpOutput = Integer.toString(bpm) + " BPM";
 
                 final TextView beats = (TextView) findViewById(R.id.beats);
                 beats.setText(bmpOutput);
 
-                // TODO Make a comment based on the value.
-                //final TextView comment = (TextView) findViewById(R.id.comment);
-                //comment.setText(Long.toString(now)+"-"+Long.toString(lastBeat)+" "+Long.toString(difference));
+                // Make a comment based what's happening.
+                final TextView comment = (TextView) findViewById(R.id.comment);
+                comment.setText(pulse.getMessage());
 
             }
         });

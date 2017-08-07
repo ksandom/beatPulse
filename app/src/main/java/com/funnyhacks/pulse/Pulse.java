@@ -6,27 +6,49 @@ package com.funnyhacks.pulse;
 
 public class Pulse {
 
+    private long now = 0;
     private long lastBeat = 0;
+    private int realtimeBMP = 0;
 
-    protected int getBPM() {
-        long now = System.currentTimeMillis();
+    private String message = "";
+
+    public void beat() {
+        now = System.currentTimeMillis();
+
+        calculateBMP();
+    }
+
+    private void calculateBMP() {
+        resetMessage();
 
         // On the first occurence, we don't have anything to calculate, so just store what we need and return 0.
         if (lastBeat < 0) {
             lastBeat = now;
 
-            // TODO Make a comment.
-            return -1;
+            failed("Good work, keep going!");
+            realtimeBMP = -1;
         }
 
         // Make a calculation.
         long difference = (now-lastBeat);
 
         lastBeat = now;
-        int realTimeBPM = Math.round(60000/difference);
-
-        // Return the result.
-        return realTimeBPM;
+        realtimeBMP = Math.round(60000/difference);
     }
 
+    public int getBPM() {
+        return realtimeBMP;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    private void failed(String newMessage) {
+        message = newMessage;
+    }
+
+    private void resetMessage() {
+        message = "";
+    }
 }
