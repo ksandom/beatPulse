@@ -12,6 +12,9 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
 
     private Pulse pulse = new Pulse();
+    private TextView beats1;
+    private TextView beats2;
+    private TextView comment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,23 +39,27 @@ public class MainActivity extends AppCompatActivity {
         welcome.setText(welcomeMessage);
 
 
-        // Set up the button.
-        final Button button = (Button) findViewById(R.id.beat);
+        // Set up the interface
+        beats1 = (TextView) findViewById(R.id.beats1);
+        beats2 = (TextView) findViewById(R.id.beats2);
+        comment = (TextView) findViewById(R.id.comment);
 
-        button.setOnClickListener(new View.OnClickListener() {
+
+        // Set up the buttons.
+        final Button button1 = (Button) findViewById(R.id.beat1);
+        button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // getBPM and put it to the user.
+                // Trigger a beat, and update the interface accordingly.
                 pulse.beat();
-                int bpm = pulse.getBPM();
-                String bmpOutput = Integer.toString(bpm) + " BPM";
-
-                final TextView beats = (TextView) findViewById(R.id.beats);
-                beats.setText(bmpOutput);
-
-                // Make a comment based what's happening.
-                final TextView comment = (TextView) findViewById(R.id.comment);
-                comment.setText(pulse.getMessage());
-
+                updateInterface();
+            }
+        });
+        final Button button2 = (Button) findViewById(R.id.beat2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Trigger a beat, and update the interface accordingly.
+                pulse.beat();
+                updateInterface();
             }
         });
 
@@ -76,6 +83,20 @@ public class MainActivity extends AppCompatActivity {
         spec.setIndicator("Do it!");
         host.addTab(spec);
 
+        //Tab 3
+        spec = host.newTabSpec("Do it with details!");
+        spec.setContent(R.id.tab3);
+        spec.setIndicator("Do it with details!");
+        host.addTab(spec);
     }
 
+    private void updateInterface() {
+        // Output the realtime BMP.
+        String bmpOutput = Integer.toString(pulse.getRealtimeBPM()) + " BPM";
+        beats1.setText(bmpOutput);
+        beats2.setText(bmpOutput);
+
+        // Make a comment based what's happening.
+        comment.setText(pulse.getMessage());
+    }
 }

@@ -6,37 +6,72 @@ package com.funnyhacks.pulse;
 
 public class Pulse {
 
+    // Raw data.
     private long now = 0;
     private long lastBeat = 0;
-    private int realtimeBMP = 0;
+    private long initialBeat = 0;
+    private int beatCount = 0;
 
+    // Calculated data.
+    private int realtimeBMP = 0;
+    private int averageBMP = 0;
+
+    // Other.
     private String message = "";
 
     public void beat() {
         now = System.currentTimeMillis();
+        beatCount++;
 
-        calculateBMP();
-    }
-
-    private void calculateBMP() {
         resetMessage();
 
-        // On the first occurence, we don't have anything to calculate, so just store what we need and return 0.
-        if (lastBeat < 0) {
-            lastBeat = now;
-
+        if (lastBeat < 1) {
+            // On the first occurence, we don't have anything to calculate, so just reset.
+            reset();
             failed("Good work, keep going!");
-            realtimeBMP = -1;
         }
-
-        // Make a calculation.
-        long difference = (now-lastBeat);
-
-        lastBeat = now;
-        realtimeBMP = Math.round(60000/difference);
+        else {
+            // Do calculations.
+            calculateRealtimeBMP();
+            calculateAverageBMP();
+        }
     }
 
-    public int getBPM() {
+    public void reset() {
+        // Raw data.
+        lastBeat = now;
+        initialBeat = now;
+        beatCount = 0;
+
+        // Calculated data;
+        realtimeBMP = -1;
+        averageBMP = -1;
+    }
+
+    private void calculateRealtimeBMP() {
+        // Make a calculation.
+        long difference = (now - lastBeat);
+
+        lastBeat = now;
+        try {
+            realtimeBMP = Math.round(60000 / difference);
+        }
+        catch (Throwable e) { // For divide by 0.
+            failed("Too many fingers?");
+        }
+    }
+
+    private void calculateAverageBMP() {
+        long difference = (now - initialBeat);
+        try {
+            averageBMP = Math.round(beatCount * 60 / difference);
+        }
+        catch (Throwable e) {
+            failed("Too soon?");
+        }
+    }
+
+    public int getRealtimeBPM() {
         return realtimeBMP;
     }
 

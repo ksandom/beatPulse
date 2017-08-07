@@ -60,7 +60,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <TextView
-                        android:id="@+id/beats"
+                        android:id="@+id/beats1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="41dp"
@@ -81,7 +81,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/beats" />
 
                     <Button
-                        android:id="@+id/beat"
+                        android:id="@+id/beat1"
                         android:layout_width="match_parent"
                         android:layout_height="198dp"
                         android:layout_marginBottom="8dp"
@@ -103,6 +103,80 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/beatAverageTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Beat - average"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/beatAverage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="0 BMP"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/beatAverageTitle" />
+
+                    <TextView
+                        android:id="@+id/beatRealtimeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Beat - realtime"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/beatAverage" />
+
+                    <TextView
+                        android:id="@+id/beatRealtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="0 BMP"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/beatAverageTitle" />
+
+                    <TextView
+                        android:id="@+id/beatsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Beat - realtime"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/beatRealtime" />
+
+                    <TextView
+                        android:id="@+id/beats2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="0 BMP"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/beatsTitle" />
+
+                    <Button
+                        android:id="@+id/beat2"
+                        android:layout_width="match_parent"
+                        android:layout_height="198dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Beat"
+                        android:textSize="36sp"
+                        app:layout_constraintTop_toBottomOf="@+id/beats" />
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:layout_editor_absoluteY="298dp" />
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
