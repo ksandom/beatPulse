@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        final Button button = (Button) findViewById(R.id.beatMe);
+        final Button button = (Button) findViewById(R.id.beat);
+
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // getBPM and put it to the user.
