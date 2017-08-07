@@ -57,6 +57,7 @@ public class Pulse {
             realtimeBMP = Math.round(60000 / difference);
         }
         catch (Throwable e) { // For divide by 0.
+            realtimeBMP=-2;
             failed("Too many fingers?");
         }
     }
@@ -64,15 +65,28 @@ public class Pulse {
     private void calculateAverageBMP() {
         long difference = (now - initialBeat);
         try {
-            averageBMP = Math.round(beatCount * 60 / difference);
+            averageBMP = Math.round(beatCount * 60000 / difference);
         }
         catch (Throwable e) {
+            averageBMP = -2;
             failed("Too soon?");
         }
     }
 
+    public int getAverageBMP() {
+        return averageBMP;
+    }
+
     public int getRealtimeBPM() {
         return realtimeBMP;
+    }
+
+    public int getCount() {
+        return beatCount;
+    }
+
+    public int getDuration() {
+        return Math.round((now-initialBeat)/1000);
     }
 
     public String getMessage() {

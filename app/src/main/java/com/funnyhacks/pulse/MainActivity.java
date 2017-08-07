@@ -12,9 +12,17 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
 
     private Pulse pulse = new Pulse();
-    private TextView beats1;
-    private TextView beats2;
+    // Tab2
+    private TextView beatsSimple;
     private TextView comment;
+
+    // Tab3
+    private TextView beatsAverage;
+    private TextView beatsRealtime2;
+    private TextView beatsCount;
+    private TextView beatsDuration;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +37,12 @@ public class MainActivity extends AppCompatActivity {
         String welcomeMessage = "Hi!";
         welcomeMessage += "\n\nThis is a really basic heart beat monitor to give you results really fast." +
                 "\nThere are two are two distinct pulses that come close together. If you feel" +
-                " both just press the button once. (Otherwise the estimate will flail around)" +
-                " like a shirt caught in a car door." +
+                " both just press the button once. (Otherwise the estimate will flail around" +
+                " like a shirt caught in a car door.)" +
+                "\n\nMeasuring yourself and taping the screen is quite hard (it can be done). I" +
+                "suggest getting a friend to help you. - You can hold the device, and they can" +
+                "feel your pulse and tap the button with the other hand." +
+                "\n\nMost measurements are variations of BMP (Beats Per Minute)." +
                 "\n\nIMPORTANT" +
                 "\nNothing in this app should be taken as medical advice. If you" +
                 " need medical advice or have any medical questions, please see your doctor.";
@@ -39,10 +51,15 @@ public class MainActivity extends AppCompatActivity {
         welcome.setText(welcomeMessage);
 
 
-        // Set up the interface
-        beats1 = (TextView) findViewById(R.id.beats1);
-        beats2 = (TextView) findViewById(R.id.beats2);
+        // Set up the interface - Tab1
+        beatsSimple = (TextView) findViewById(R.id.beatsSimple);
         comment = (TextView) findViewById(R.id.comment);
+
+        // Set up the interface - Tab2
+        beatsAverage = (TextView) findViewById(R.id.beatAverage);
+        beatsRealtime2 = (TextView) findViewById(R.id.beatsRealtime2);
+        beatsCount = (TextView) findViewById(R.id.beatsCount);
+        beatsDuration = (TextView) findViewById(R.id.beatsDuration);
 
 
         // Set up the buttons.
@@ -91,12 +108,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateInterface() {
-        // Output the realtime BMP.
-        String bmpOutput = Integer.toString(pulse.getRealtimeBPM()) + " BPM";
-        beats1.setText(bmpOutput);
-        beats2.setText(bmpOutput);
-
-        // Make a comment based what's happening.
+        // Tab 1
+        beatsSimple.setText(Integer.toString(pulse.getAverageBMP()));
         comment.setText(pulse.getMessage());
+
+
+        //Tab 2
+        beatsAverage.setText(Integer.toString(pulse.getAverageBMP()));
+        beatsRealtime2.setText(Integer.toString(pulse.getRealtimeBPM()));
+        beatsCount.setText(Integer.toString(pulse.getCount()));
+        beatsDuration.setText(Integer.toString(pulse.getDuration()));
     }
 }
