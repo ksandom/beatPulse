@@ -11,7 +11,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    private long lastBeat = 0;
+    private Pulse pulse = new Pulse();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // getBPM and put it to the user.
-                int bpm = getBPM();
+                int bpm = pulse.getBPM();
                 String bmpOutput = Integer.toString(bpm) + " BPM";
 
                 final TextView beats = (TextView) findViewById(R.id.beats);
@@ -77,24 +77,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    protected int getBPM() {
-        long now = System.currentTimeMillis();
-
-        // On the first occurence, we don't have anything to calculate, so just store what we need and return 0.
-        if (lastBeat < 0) {
-            lastBeat = now;
-
-            // TODO Make a comment.
-            return -1;
-        }
-
-        // Make a calculation.
-        long difference = (now-lastBeat);
-
-        lastBeat = now;
-        int realTimeBPM = Math.round(60000/difference);
-
-        // Return the result.
-        return realTimeBPM;
-    }
 }
