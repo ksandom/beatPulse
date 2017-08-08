@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                 " both just press the button once. (Otherwise the estimate will flail around" +
                 " like a shirt caught in a car door.)" +
                 "\n\nMeasuring yourself and taping the screen is quite hard (it can be done). I" +
-                "suggest getting a friend to help you. - You can hold the device, and they can" +
-                "feel your pulse and tap the button with the other hand." +
+                " suggest getting a friend to help you. - You can hold the device, and they can" +
+                " feel your pulse and tap the button with the other hand." +
                 "\n\nMost measurements are variations of BMP (Beats Per Minute)." +
                 "\n\nIMPORTANT" +
                 "\nNothing in this app should be taken as medical advice. If you" +
