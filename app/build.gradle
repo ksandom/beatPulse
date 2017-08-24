@@ -7,8 +7,8 @@ android {
         applicationId "com.funnyhacks.pulse"
         minSdkVersion 19
         targetSdkVersion 23
-        versionCode 1708241426
-        versionName "2017-08-24--142604"
+        versionCode 1708241427
+        versionName "2017-08-24--142730"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
