@@ -16,4 +16,3 @@ releaseVersion=$releaseVersion" > var/releaseInfo
 sed -i "s/^  *versionCode .*$/        versionCode $releaseVersion/g;
         s/^  *versionName \".*$/        versionName \"$releaseName\"/g" $gradleFile
 
-

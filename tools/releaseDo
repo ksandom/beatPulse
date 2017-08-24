@@ -7,6 +7,8 @@ echo "Release:
     name:    $releaseName
     version: $releaseVersion"
 
+git add app/app-release.apk var/releaseInfo "$gradleFile"
+git commit -m 'Made release $releaseName.'
 
 git tag -a "$releaseName" -m "Release $releaseName ($releaseVersion)"
 git pull
