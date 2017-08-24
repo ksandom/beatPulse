@@ -10,8 +10,10 @@ echo "Release:
     version: $releaseVersion"
 
 echo "# Values of the latest release.
-releaseName=$releaseName
-releaseVersion=$releaseVersion" > var/releaseInfo
+releaseName='$releaseName'
+releaseVersion='$releaseVersion'
+
+gradleFile='$gradleFile'" > var/releaseInfo
 
 sed -i "s/^  *versionCode .*$/        versionCode $releaseVersion/g;
         s/^  *versionName \".*$/        versionName \"$releaseName\"/g" $gradleFile
