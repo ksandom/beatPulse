@@ -27,7 +27,7 @@ public class Pulse {
 
         if (lastBeat < 1) {
             // On the first occurence, we don't have anything to calculate, so just reset.
-            reset();
+            firstBeat();
             failed("Good work, keep going!");
         }
         else {
@@ -37,13 +37,27 @@ public class Pulse {
         }
     }
 
-    public void reset() {
-        // Raw data.
+    public void firstBeat() {
+        reset();
         lastBeat = now;
         initialBeat = now;
+    }
+
+    public void reset() {
+        // Feedback.
+        if (lastBeat > 0) {
+            failed("Reset, ready to start again.");
+        }
+        else {
+            failed("Already reset, just hit the beat button to continue.");
+        }
+
+        // Raw data.
+        lastBeat = 0;
+        initialBeat = 0;
         beatCount = 0;
 
-        // Calculated data;
+        // Calculated data.
         realtimeBMP = -1;
         averageBMP = -1;
     }
@@ -86,7 +100,12 @@ public class Pulse {
     }
 
     public int getDuration() {
-        return Math.round((now-initialBeat)/1000);
+        if (initialBeat > 0) {
+            return Math.round((now-initialBeat)/1000);
+        }
+        else {
+            return 0;
+        }
     }
 
     public String getMessage() {
