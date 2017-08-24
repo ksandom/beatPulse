@@ -63,19 +63,36 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Set up the buttons.
-        final Button button1 = (Button) findViewById(R.id.beat1);
-        button1.setOnClickListener(new View.OnClickListener() {
+        final Button beat1 = (Button) findViewById(R.id.beat1);
+        beat1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Trigger a beat, and update the interface accordingly.
                 pulse.beat();
                 updateInterface();
             }
         });
-        final Button button2 = (Button) findViewById(R.id.beat2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        final Button beat2 = (Button) findViewById(R.id.beat2);
+        beat2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Trigger a beat, and update the interface accordingly.
                 pulse.beat();
+                updateInterface();
+            }
+        });
+
+        final Button reset1 = (Button) findViewById(R.id.reset1);
+        reset1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Trigger a beat, and update the interface accordingly.
+                pulse.reset();
+                updateInterface();
+            }
+        });
+        final Button reset2 = (Button) findViewById(R.id.reset2);
+        reset2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Trigger a beat, and update the interface accordingly.
+                pulse.reset();
                 updateInterface();
             }
         });
