@@ -1,0 +1,15 @@
+#!/bin/bash
+# Do git stuff to make a release.
+
+. var/releaseInfo
+
+echo "Release:
+    name:    $releaseName
+    version: $releaseVersion"
+
+
+git tag -a "$releaseName" -m "Release $releaseName ($releaseVersion)"
+git pull
+git push
+git push --tags
+

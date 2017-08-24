@@ -1,0 +1,19 @@
+#!/bin/bash
+# Do git stuff to make a release.
+
+gradleFile="app/build.gradle"
+
+releaseName=`date +%Y-%m-%d--%H%M%S`
+releaseVersion=`date +%y%m%d%H%M`
+echo "Release:
+    name:    $releaseName
+    version: $releaseVersion"
+
+echo "# Values of the latest release.
+releaseName=$releaseName
+releaseVersion=$releaseVersion" > var/releaseInfo
+
+sed -i "s/^  *versionCode .*$/        versionCode $releaseVersion/g;
+        s/^  *versionName \".*$/        versionName \"$releaseName\"/g" $gradleFile
+
+
