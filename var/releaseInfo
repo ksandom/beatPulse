@@ -1,5 +1,5 @@
 # Values of the latest release.
-releaseName='2017-08-24--142730'
-releaseVersion='1708241427'
+releaseName='2017-08-28--110438'
+releaseVersion='1708281104'
 
 gradleFile='app/build.gradle'
