@@ -56,7 +56,6 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="18dp"
-                                android:text="Welcome! (More welcomes comming in a sec...)"
                                 android:textSize="18sp"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
@@ -77,9 +76,8 @@
                     <ScrollView
                         app:layout_constraintTop_toTopOf="parent"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_above="@+id/beat2">
+                        android:layout_height="0sp"
+                        android:layout_weight="1">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -89,9 +87,9 @@
                                 android:id="@+id/beatsSimpleTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="64dp"
+                                android:layout_marginTop="64sp"
                                 android:text="BPM - average (BPM)"
-                                android:textSize="24dp"
+                                android:textSize="24sp"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -99,7 +97,7 @@
                                 android:id="@+id/beatsSimple"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="0dp"
+                                android:layout_marginTop="0sp"
                                 android:text="0"
                                 android:textSize="72sp"
                                 app:layout_constraintLeft_toLeftOf="parent"
@@ -110,7 +108,7 @@
                                 android:id="@+id/comment"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
+                                android:layout_marginTop="16sp"
                                 android:text="Are you dead?"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
@@ -120,10 +118,10 @@
                                 android:id="@+id/reset1"
                                 android:layout_height="wrap_content"
                                 android:layout_width="match_parent"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginLeft="8dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8sp"
+                                android:layout_marginLeft="8sp"
+                                android:layout_marginRight="8sp"
+                                android:layout_marginTop="16sp"
                                 android:text="Reset"
                                 app:layout_constraintTop_toBottomOf="@+id/comment" />
 
@@ -139,17 +137,17 @@
                         <Button
                             android:id="@+id/beat1"
                             android:layout_width="match_parent"
-                            android:layout_height="198dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_height="198sp"
+                            android:layout_marginBottom="8sp"
+                            android:layout_marginLeft="8sp"
+                            android:layout_marginRight="8sp"
+                            android:layout_marginTop="8sp"
                             android:text="Beat"
                             android:textSize="36sp"
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            tools:layout_editor_absoluteY="298dp" />
+                            tools:layout_editor_absoluteY="298sp" />
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -163,9 +161,8 @@
                     <ScrollView
                         app:layout_constraintTop_toTopOf="parent"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_above="@+id/beat2">
+                        android:layout_height="0sp"
+                        android:layout_weight="1">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -176,9 +173,9 @@
                                 android:id="@+id/beatAverageTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="0dp"
+                                android:layout_marginTop="0sp"
                                 android:text="BMP - average (BMP)"
-                                android:textSize="18dp"
+                                android:textSize="18sp"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
                                 app:layout_constraintTop_toBottomOf="parent" />
@@ -187,9 +184,9 @@
                                 android:id="@+id/beatAverage"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="0dp"
+                                android:layout_marginTop="0sp"
                                 android:text="0"
-                                android:textSize="24dp"
+                                android:textSize="24sp"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/beatAverageTitle" />
@@ -198,9 +195,9 @@
                                 android:id="@+id/beatsRealtimeTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
+                                android:layout_marginTop="16sp"
                                 android:text="BMP - realtime (BMP)"
-                                android:textSize="18dp"
+                                android:textSize="18sp"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/beatAverage" />
@@ -209,9 +206,9 @@
                                 android:id="@+id/beatsRealtime2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="0dp"
+                                android:layout_marginTop="0sp"
                                 android:text="0"
-                                android:textSize="24dp"
+                                android:textSize="24sp"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/beatAverageTitle" />
@@ -220,9 +217,9 @@
                                 android:id="@+id/beatsCountTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
+                                android:layout_marginTop="16sp"
                                 android:text="Beats - count"
-                                android:textSize="18dp"
+                                android:textSize="18sp"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/beatRealtime" />
@@ -231,9 +228,9 @@
                                 android:id="@+id/beatsCount"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="0dp"
+                                android:layout_marginTop="0sp"
                                 android:text="0"
-                                android:textSize="24dp"
+                                android:textSize="24sp"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/beatsTitle" />
@@ -242,9 +239,9 @@
                                 android:id="@+id/beatsDurationTitle"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
+                                android:layout_marginTop="16sp"
                                 android:text="Beats - duration (seconds)"
-                                android:textSize="18dp"
+                                android:textSize="18sp"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/beats2" />
@@ -253,9 +250,9 @@
                                 android:id="@+id/beatsDuration"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="0dp"
+                                android:layout_marginTop="0sp"
                                 android:text="0"
-                                android:textSize="24dp"
+                                android:textSize="24sp"
                                 app:layout_constraintLeft_toLeftOf="parent"
                                 app:layout_constraintRight_toRightOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/durationTitle" />
@@ -264,10 +261,10 @@
                                 android:id="@+id/reset2"
                                 android:layout_height="wrap_content"
                                 android:layout_width="match_parent"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginLeft="8dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8sp"
+                                android:layout_marginLeft="8sp"
+                                android:layout_marginRight="8sp"
+                                android:layout_marginTop="16sp"
                                 android:text="Reset"
                                 app:layout_constraintTop_toBottomOf="@+id/beatsDuration" />
 
@@ -280,11 +277,11 @@
                         <Button
                             android:id="@+id/beat2"
                             android:layout_width="match_parent"
-                            android:layout_height="198dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginTop="16dp"
+                            android:layout_height="198sp"
+                            android:layout_marginBottom="8sp"
+                            android:layout_marginLeft="8sp"
+                            android:layout_marginRight="8sp"
+                            android:layout_marginTop="16sp"
                             android:text="Beat"
                             android:textSize="36sp"
                             app:layout_constraintBottom_toBottomOf="parent" />
