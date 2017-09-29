@@ -29,27 +29,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
-        While it won't take long to start everything up, even on an old phone, we may as well set
-        the welcome message first so the user can see that while stuff gets loaded.
-        */
-        // Set welcome message.
-        String welcomeMessage = "Hi!";
-        welcomeMessage += "\n\nThis is a really basic heart beat monitor to give you results really fast." +
-                "\nThere are two are two distinct pulses that come close together. If you feel" +
-                " both just press the button once. (Otherwise the estimate will flail around" +
-                " like a shirt caught in a car door.)" +
-                "\n\nMeasuring yourself and taping the screen is quite hard (it can be done). I" +
-                " suggest getting a friend to help you. - You can hold the device, and they can" +
-                " feel your pulse and tap the button with the other hand." +
-                "\n\nMost measurements are variations of BMP (Beats Per Minute)." +
-                "\n\nIMPORTANT" +
-                "\nNothing in this app should be taken as medical advice. If you" +
-                " need medical advice or have any medical questions, please see your doctor.";
-
-        final TextView welcome = (TextView) findViewById(R.id.welcomeMessage);
-        welcome.setText(welcomeMessage);
-
 
         // Set up the interface - Tab1
         beatsSimple = (TextView) findViewById(R.id.beatsSimple);

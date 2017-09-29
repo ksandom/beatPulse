@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">InstantPulse</string>
+
+    <string name="welcomeMessage">
+        This is a really basic heart beat monitor to give you results really fast.
+
+        \n\nThere are two distinct pulses that come close together. If you feel both just
+        press the button once. (Otherwise the estimate will flail around like a shirt caught in a
+        car door.)
+
+        \n\nMeasuring yourself and taping the screen is quite hard (it can be done). I suggest
+        getting a friend to help you. - You can hold the device, and they can feel your pulse and
+        tap the button with the other hand.
+        \nAlternatively, my fiance came up with a really easy way to do it yourself. Use one hand to
+        press the button and the other to measure your pulse on your neck. It\'s really easy!
+
+        \n\nMost measurements are variations of BMP (Beats Per Minute).
+
+        \n\nIMPORTANT
+        \nNothing in this app should be taken as medical advice. If you
+        need medical advice or have any medical questions, please see your doctor.</string>
+
+    <string name="initialValue">-1</string>
+
+    <string name="lblAverage">BMP - average (BMP)</string>
+    <string name="lblRealtime">BMP - realtime (BMP)</string>
+    <string name="lblCount">Beats - count</string>
+    <string name="lblDuration">Beats - duration (seconds)</string>
+
+    <string name="initialComment">Are you dead?</string>
+
+    <string name="btnBeat">Beat</string>
+    <string name="btnReset">Reset</string>
 </resources>
