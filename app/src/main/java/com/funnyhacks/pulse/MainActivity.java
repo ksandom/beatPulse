@@ -101,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
         spec.setContent(R.id.tab3);
         spec.setIndicator("Do it with details!");
         host.addTab(spec);
+
+        // Update the interface to cope with screen rotations.
+        updateInterface();
     }
 
     private void updateInterface() {
