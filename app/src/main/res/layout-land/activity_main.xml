@@ -116,17 +116,6 @@
                                 app:layout_constraintRight_toRightOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/beats" />
 
-                            <Button
-                                android:id="@+id/reset1"
-                                android:layout_height="wrap_content"
-                                android:layout_width="match_parent"
-                                android:layout_marginBottom="8sp"
-                                android:layout_marginLeft="8sp"
-                                android:layout_marginRight="8sp"
-                                android:layout_marginTop="16sp"
-                                android:text="@string/btnReset"
-                                app:layout_constraintTop_toBottomOf="@+id/comment" />
-
                         </LinearLayout>
                     </ScrollView>
 
@@ -136,20 +125,36 @@
                         android:layout_height="match_parent"
                         android:layout_weight="0">
 
-                        <Button
-                            android:id="@+id/beat1"
+                        <LinearLayout
                             android:layout_width="200sp"
                             android:layout_height="match_parent"
-                            android:layout_marginBottom="8sp"
-                            android:layout_marginLeft="8sp"
-                            android:layout_marginRight="8sp"
-                            android:layout_marginTop="8sp"
-                            android:text="@string/btnBeat"
-                            android:textSize="36sp"
-                            app:layout_constraintLeft_toLeftOf="parent"
-                            app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            tools:layout_editor_absoluteY="298sp" />
+                            android:orientation="vertical" >
+
+
+                            <Button
+                                android:id="@+id/beat1"
+                                android:layout_width="200sp"
+                                android:layout_height="200sp"
+                                android:layout_marginBottom="8sp"
+                                android:layout_marginLeft="8sp"
+                                android:layout_marginRight="8sp"
+                                android:layout_marginTop="16sp"
+                                android:text="@string/btnBeat"
+                                android:textSize="36sp"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Button
+                                android:id="@+id/reset1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="200sp"
+                                android:layout_marginBottom="8sp"
+                                android:layout_marginLeft="8sp"
+                                android:layout_marginRight="8sp"
+                                android:layout_marginTop="16sp"
+                                android:text="@string/btnReset"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                        </LinearLayout>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -259,34 +264,43 @@
                                 app:layout_constraintRight_toRightOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/durationTitle" />
 
-                            <Button
-                                android:id="@+id/reset2"
-                                android:layout_height="wrap_content"
-                                android:layout_width="match_parent"
-                                android:layout_marginBottom="8sp"
-                                android:layout_marginLeft="8sp"
-                                android:layout_marginRight="8sp"
-                                android:layout_marginTop="16sp"
-                                android:text="@string/btnReset"
-                                app:layout_constraintTop_toBottomOf="@+id/beatsDuration" />
-
                         </LinearLayout>
                     </ScrollView>
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_weight="0">
-                        <Button
-                            android:id="@+id/beat2"
+                        android:orientation="vertical">
+
+                        <LinearLayout
                             android:layout_width="200sp"
                             android:layout_height="match_parent"
-                            android:layout_marginBottom="8sp"
-                            android:layout_marginLeft="8sp"
-                            android:layout_marginRight="8sp"
-                            android:layout_marginTop="16sp"
-                            android:text="@string/btnBeat"
-                            android:textSize="36sp"
-                            app:layout_constraintBottom_toBottomOf="parent" />
+                            android:orientation="vertical" >
+
+
+                            <Button
+                                android:id="@+id/beat2"
+                                android:layout_width="200sp"
+                                android:layout_height="200sp"
+                                android:layout_marginBottom="8sp"
+                                android:layout_marginLeft="8sp"
+                                android:layout_marginRight="8sp"
+                                android:layout_marginTop="16sp"
+                                android:text="@string/btnBeat"
+                                android:textSize="36sp"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Button
+                                android:id="@+id/reset2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="200sp"
+                                android:layout_marginBottom="8sp"
+                                android:layout_marginLeft="8sp"
+                                android:layout_marginRight="8sp"
+                                android:layout_marginTop="16sp"
+                                android:text="@string/btnReset"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                        </LinearLayout>
                     </RelativeLayout>
 
                 </LinearLayout>
