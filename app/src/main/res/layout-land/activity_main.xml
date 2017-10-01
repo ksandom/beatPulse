@@ -73,12 +73,13 @@
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
                     <ScrollView
                         app:layout_constraintTop_toTopOf="parent"
-                        android:layout_width="match_parent"
-                        android:layout_height="0sp"
-                        android:layout_weight="1">
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/scrolly1">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -131,14 +132,14 @@
 
 
                     <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="0">
 
                         <Button
                             android:id="@+id/beat1"
-                            android:layout_width="match_parent"
-                            android:layout_height="198sp"
+                            android:layout_width="200sp"
+                            android:layout_height="match_parent"
                             android:layout_marginBottom="8sp"
                             android:layout_marginLeft="8sp"
                             android:layout_marginRight="8sp"
@@ -157,12 +158,12 @@
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <ScrollView
                         app:layout_constraintTop_toTopOf="parent"
-                        android:layout_width="match_parent"
-                        android:layout_height="0sp"
+                        android:layout_width="0sp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1">
 
                         <LinearLayout
@@ -272,13 +273,13 @@
                         </LinearLayout>
                     </ScrollView>
                     <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="0">
                         <Button
                             android:id="@+id/beat2"
-                            android:layout_width="match_parent"
-                            android:layout_height="198sp"
+                            android:layout_width="200sp"
+                            android:layout_height="match_parent"
                             android:layout_marginBottom="8sp"
                             android:layout_marginLeft="8sp"
                             android:layout_marginRight="8sp"
