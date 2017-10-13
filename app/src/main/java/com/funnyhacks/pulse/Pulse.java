@@ -19,6 +19,17 @@ public class Pulse {
     // Other.
     private String message = "";
 
+    private static Pulse instance = null;
+
+    public static Pulse getInstance() {
+        if (instance == null) {
+            instance = new Pulse();
+        }
+
+        return instance;
+    }
+
+
     public void beat() {
         now = System.currentTimeMillis();
         beatCount++;

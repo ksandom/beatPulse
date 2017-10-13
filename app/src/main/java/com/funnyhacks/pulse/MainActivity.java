@@ -11,7 +11,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Pulse pulse = new Pulse();
+    private Pulse pulse = Pulse.getInstance();
     // Tab2
     private TextView beatsSimple;
     private TextView comment;
