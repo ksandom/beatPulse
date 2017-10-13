@@ -11,7 +11,13 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Stuff for rotating sanely.
     private Pulse pulse = Pulse.getInstance();
+    private InterfaceHelper interfaceHelper = InterfaceHelper.getInstance();
+
+    // Tab management.
+    TabHost host;
+
     // Tab2
     private TextView beatsSimple;
     private TextView comment;
@@ -23,12 +29,15 @@ public class MainActivity extends AppCompatActivity {
     private TextView beatsDuration;
 
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        interfaceHelper.setTab(host.getCurrentTab());
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         // Set up the interface - Tab1
         beatsSimple = (TextView) findViewById(R.id.beatsSimple);
@@ -79,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Set up tabs.
-        TabHost host = (TabHost)findViewById(R.id.tabHost);
+        host = (TabHost)findViewById(R.id.tabHost);
         host.setup();
 
         TabHost.TabSpec spec;
@@ -104,6 +113,15 @@ public class MainActivity extends AppCompatActivity {
 
         // Update the interface to cope with screen rotations.
         updateInterface();
+
+        // If we've only rotated, make sure we are on the right tab.
+        int tab = interfaceHelper.getTab();
+        if (tab > -1) {
+            host.setCurrentTab(tab);
+        }
+        else {
+            interfaceHelper.setTab(host.getCurrentTab());
+        }
     }
 
     private void updateInterface() {
