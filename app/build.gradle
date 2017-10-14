@@ -7,8 +7,8 @@ android {
         applicationId "com.funnyhacks.pulse"
         minSdkVersion 19
         targetSdkVersion 23
-        versionCode 1708281113
-        versionName "2017-08-28--111357"
+        versionCode 1710141837
+        versionName "2017-10-14--183754"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -29,4 +29,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
     testCompile 'junit:junit:4.12'
+    compile 'javax.inject:javax.inject:1'
 }
