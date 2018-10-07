@@ -6,9 +6,9 @@ android {
     defaultConfig {
         applicationId "com.funnyhacks.pulse"
         minSdkVersion 19
-        targetSdkVersion 23
-        versionCode 1710141837
-        versionName "2017-10-14--183754"
+        targetSdkVersion 26
+        versionCode 1810071046
+        versionName "2018-10-07--104657"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
